@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3000",
     "prod": "pnpm build && pnpm start",
     "lint": "next lint --fix",
     "lint:check": "next lint",

@@ -5,6 +5,8 @@
   "author": "Nishant Kohli",
   "private": true,
   "scripts": {
+    "next-mui-5": "pnpm --filter next-v15-mui-5 run dev",
+    "next-mui-5:build": "pnpm --filter next-v15-mui-5 run build",
     "next-mui-6": "pnpm --filter next-v15-mui-6 run dev",
     "next-mui-6:build": "pnpm --filter next-v15-mui-6 run build",
     "next-mui-7": "pnpm --filter next-v15-mui-7 run dev",
