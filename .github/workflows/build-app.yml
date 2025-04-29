@@ -1,0 +1,33 @@
+name: build-app
+
+on: [push]
+
+env:
+  HUSKY: 0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.14.0]
+        os: [ubuntu-latest]
+
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node env
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install pnpm v10.8.1 globally
+        run: npm i -g pnpm@10.8.1
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build nextjs-app
+        run: pnpm build
