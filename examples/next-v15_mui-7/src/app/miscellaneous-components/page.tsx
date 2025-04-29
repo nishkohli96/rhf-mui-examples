@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import { ContentContainer, LinksList, PageHeading, SubHeading } from '@/components';
 import { DocsLinks, SourceCodeLinks, CodeSandboxLinks } from '@/constants';
-
-const ClientForm = dynamic(() => import('@/forms/miscellaneous-components'), { ssr: false });
+// import MiscellaneousComponentsForm from '@/forms/miscellaneous-components';
 
 const title = 'Miscellaneous Components';
 const description = 'Form demonstrating usage of external components like ColorPicker & RichTextEditor with react-hook-form.';
@@ -28,7 +26,7 @@ const MiscellaneousComponentsFormPage = () => {
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
-      <ClientForm />
+      {/* <MiscellaneousComponentsForm /> */}
       <LinksList links={links} />
       <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>

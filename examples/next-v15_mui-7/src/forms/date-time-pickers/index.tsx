@@ -31,7 +31,7 @@ const DateTimePickersForm = () => {
     formState: { errors },
   } = useForm<FormSchema>();
 
-  function onFormSubmit(formValues) {
+  function onFormSubmit(formValues: FormSchema) {
     showToastMessage(formValues);
   }
 

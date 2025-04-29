@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import { ContentContainer, PageHeading, LinksList, SubHeading } from '@/components';
 import { DocsLinks, SourceCodeLinks } from '@/constants';
-
-const ClientForm = dynamic(() => import('@/forms/autocomplete'), { ssr: false });
+// import AutocompleteForm from '@/forms/autocomplete';
 
 const title = 'Autocomplete';
 const description = 'Showcase of Autocomplete components - RHFAutocomplete, RHFMultiAutocomplete and RHFCountrySelect designed for selecting single or multiple values in form.';
@@ -27,7 +25,7 @@ const MultiSelectDropdownFormPage = () => {
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
-      <ClientForm />
+      {/* <AutocompleteForm /> */}
       <LinksList links={docsLinks} />
       <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>

@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import { ContentContainer, PageHeading, LinksList, SubHeading } from '@/components';
 import { DocsLinks, SourceCodeLinks, CodeSandboxLinks } from '@/constants';
-
-const ClientForm = dynamic(() => import('@/forms/complete-form'), { ssr: false });
+// import CompleteForm from '@/forms/complete-form';
 
 const title = 'Complete Form with Register Options';
 const description = 'A complete form showcasing all components from this package with appropriate validations.';
@@ -23,7 +21,7 @@ const CompleteFormPage = () => {
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
-      <ClientForm />
+      {/* <CompleteForm /> */}
       <LinksList links={links} />
       <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>

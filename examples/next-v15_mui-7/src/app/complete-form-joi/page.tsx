@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import { ContentContainer, PageHeading, LinksList, SubHeading } from '@/components';
 import { DocsLinks, SourceCodeLinks, CodeSandboxLinks, ValidationLibLinks } from '@/constants';
-
-const ClientForm = dynamic(() => import('@/forms/complete-form-with-joi'), { ssr: false });
+// import CompleteFormWithJoi from '@/forms/complete-form-with-joi';
 
 const title = 'Complete Form with Joi';
 const description = 'A complete form showcasing all components from this package, with validation handled by Joi.';
@@ -23,7 +21,7 @@ const CompleteFormWithJoiPage = () => {
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
-      <ClientForm />
+      {/* <CompleteFormWithJoi /> */}
       <LinksList links={[...links, ValidationLibLinks.joi]} />
       <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>

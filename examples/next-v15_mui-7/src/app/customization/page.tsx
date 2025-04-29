@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import { ContentContainer, LinksList, PageHeading, SubHeading } from '@/components';
 import { DocsLinks, SourceCodeLinks, CodeSandboxLinks, ValidationLibLinks } from '@/constants';
-
-const ClientForm = dynamic(() => import('@/forms/styled-form-with-reusable-component'), { ssr: false });
+// import StyledReusableComponentForm from '@/forms/styled-form-with-reusable-component';
 
 const title = 'Styled form with a reusable component';
 const description
@@ -29,7 +27,7 @@ const CustomizationPage = () => {
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description} />
-      <ClientForm />
+      {/* <StyledReusableComponentForm /> */}
       <LinksList links={links} />
       <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
