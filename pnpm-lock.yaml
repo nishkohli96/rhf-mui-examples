@@ -6,7 +6,9 @@ settings:
 
 importers:
 
-  .:
+  .: {}
+
+  examples/next-v15_mui-7:
     dependencies:
       '@emotion/cache':
         specifier: ^11.14.0
