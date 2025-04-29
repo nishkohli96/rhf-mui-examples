@@ -55,10 +55,10 @@ export default function StyledReusableComponentForm() {
       >
         <form onSubmit={handleSubmit(onFormSubmit)}>
           <GridContainer>
-            <Grid size={12}>
+            <Grid item xs={12}>
               <FieldVariantInfo title='Custom FormLabel for both text inputs; custom helperText for "firstName" field'/>
             </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid item xs={12} md={6}>
               <StyledRHFTextField
                 fieldName="firstName"
                 control={control}
@@ -77,7 +77,7 @@ export default function StyledReusableComponentForm() {
                 errorMessage={errors?.firstName?.message}
               />
             </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid item xs={12} md={6}>
               <StyledRHFTextField
                 fieldName="lastName"
                 control={control}
@@ -94,7 +94,7 @@ export default function StyledReusableComponentForm() {
                 errorMessage={errors?.lastName?.message}
               />
             </Grid>
-            <Grid size={6}>
+            <Grid item xs={6}>
               <FieldVariantInfo title="Date Picker with Luxon adapter" />
               <RHFDatePicker
                 control={control}
@@ -103,10 +103,10 @@ export default function StyledReusableComponentForm() {
                 disableFuture
               />
             </Grid>
-            <Grid size={12}>
+            <Grid item xs={12}>
               <SubmitButton />
             </Grid>
-            <Grid size={12}>
+            <Grid item xs={12}>
               <FormState formValues={watch()} errors={errors} />
             </Grid>
           </GridContainer>

@@ -71,7 +71,7 @@ const AutocompleteForm = () => {
     <FormContainer title="Autocomplete variations with Register Options">
       <form onSubmit={handleSubmit(onFormSubmit)}>
         <GridContainer>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Autocomplete" />
             <RHFAutocomplete
               fieldName="sourceAirport"
@@ -89,7 +89,7 @@ const AutocompleteForm = () => {
               errorMessage={errors?.sourceAirport?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid xs={12} md={6}>
             <FieldVariantInfo title="Autocomplete accepting multiple options and customized chip" />
             <RHFAutocomplete
               fieldName="destinationAirports"
@@ -116,7 +116,7 @@ const AutocompleteForm = () => {
               }}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Multi Autocomplete With String Options" />
             <RHFMultiAutocomplete
               fieldName="colors"
@@ -145,7 +145,7 @@ const AutocompleteForm = () => {
               errorMessage={errors?.colors?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Multi Autocomplete With Object Array Options and customized checkbox and formLabel" />
             <RHFMultiAutocomplete
               fieldName="iplTeams"
@@ -183,7 +183,7 @@ const AutocompleteForm = () => {
               errorMessage={errors?.iplTeams?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="CountrySelect with customized textfield" />
             <RHFCountrySelect
               fieldName="nationality"
@@ -199,7 +199,7 @@ const AutocompleteForm = () => {
               errorMessage={errors?.nationality?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="CountrySelect - Multiple selection with default values & preferredCountries" />
             <RHFCountrySelect
               fieldName="countriesVisited"
@@ -210,7 +210,7 @@ const AutocompleteForm = () => {
               errorMessage={errors?.countriesVisited?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="CountrySelect - Multiple Selection with minLength validation, valueKey, filtered Options and ChipProps" />
             <RHFCountrySelect
               fieldName="dreamDestinations"
@@ -252,10 +252,10 @@ const AutocompleteForm = () => {
               errorMessage={errors?.dreamDestinations?.message}
             />
           </Grid>
-          <Grid size={12}>
+          <Grid item xs={12}>
             <SubmitButton />
           </Grid>
-          <Grid size={12}>
+          <Grid item xs={12}>
             <FormState formValues={watch()} errors={errors} />
           </Grid>
         </GridContainer>

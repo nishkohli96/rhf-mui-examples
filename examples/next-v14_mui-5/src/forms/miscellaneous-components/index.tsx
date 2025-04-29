@@ -56,7 +56,7 @@ const MiscellaneousComponentsForm = () => {
     <FormContainer title="Miscellaneous Components">
       <form onSubmit={handleSubmit(onFormSubmit)}>
         <GridContainer>
-          <Grid size={12}>
+          <Grid item xs={12}>
             <FieldVariantInfo title="CK5 Rich Text Editor" />
             <RHFRichTextEditor
               fieldName="bio"
@@ -76,7 +76,7 @@ const MiscellaneousComponentsForm = () => {
               errorMessage={errors?.bio?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Color Picker" />
             <RHFColorPicker
               fieldName="favouriteColor"
@@ -100,7 +100,7 @@ const MiscellaneousComponentsForm = () => {
               errorMessage={errors?.favouriteColor?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Color Picker return rgb value with defaultColor" />
             <RHFColorPicker
               fieldName="secondFavColor"
@@ -124,7 +124,7 @@ const MiscellaneousComponentsForm = () => {
               errorMessage={errors?.secondFavColor?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Phone Input" />
             <RHFPhoneInput
               fieldName="contactNumber"
@@ -133,7 +133,7 @@ const MiscellaneousComponentsForm = () => {
               errorMessage={errors?.contactNumber?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Phone Input from a set of countries, with a few preferred countries at the top" />
             <RHFPhoneInput
               fieldName="contactNumber2"
@@ -160,10 +160,10 @@ const MiscellaneousComponentsForm = () => {
               errorMessage={errors?.contactNumber2?.message}
             />
           </Grid>
-          <Grid size={12}>
+          <Grid item xs={12}>
             <SubmitButton />
           </Grid>
-          <Grid size={12}>
+          <Grid item xs={12}>
             <FormState formValues={watch()} errors={errors} />
           </Grid>
         </GridContainer>

@@ -15,7 +15,8 @@ const Footer = () => {
       <Toolbar>
         <Grid container sx={{ padding: '10px', flexGrow: 1, }}>
           <Grid
-            size={12}
+            item
+            xs={12}
             sx={{
               display: 'flex',
               justifyContent: 'center'
@@ -39,7 +40,7 @@ const Footer = () => {
               </Link>
             ))}
           </Grid>
-          <Grid size={12}>
+          <Grid item xs={12}>
             <Typography
               variant="body1"
               sx={{ mt: '10px', textAlign: 'center' }}

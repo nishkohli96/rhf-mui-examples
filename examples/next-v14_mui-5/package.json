@@ -21,6 +21,7 @@
     "@mui/material": "^5.17.0",
     "@mui/material-nextjs": "^5.16.14",
     "@mui/x-date-pickers": "^6.20.2",
+    "@nish1896/rhf-mui-components": "latest",
     "@faker-js/faker": "^9.2.0",
     "ckeditor5": "^43.0.0",
     "class-transformer": "^0.5.1",

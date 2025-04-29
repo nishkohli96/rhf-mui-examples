@@ -66,7 +66,7 @@ const InputsWithRegisterForm = () => {
     <FormContainer title="Inputs">
       <form onSubmit={handleSubmit(onFormSubmit)}>
         <GridContainer>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Basic Input field with required validation" />
             <RHFTextField
               fieldName="firstName"
@@ -81,7 +81,7 @@ const InputsWithRegisterForm = () => {
               errorMessage={errors?.firstName?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Input with min & max length validation" />
             <RHFTextField
               fieldName="lastName"
@@ -99,7 +99,7 @@ const InputsWithRegisterForm = () => {
               errorMessage={errors?.lastName?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Input with pattern validation & label above form-field" />
             <RHFTextField
               fieldName="email"
@@ -115,7 +115,7 @@ const InputsWithRegisterForm = () => {
               showLabelAboveFormField
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Simple Password Field" />
             <RHFPasswordInput
               fieldName="password"
@@ -134,7 +134,7 @@ const InputsWithRegisterForm = () => {
               errorMessage={errors?.password?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Password Field with custom icons & validate rule" />
             <RHFPasswordInput
               fieldName="confirmPassword"
@@ -158,7 +158,7 @@ const InputsWithRegisterForm = () => {
               errorMessage={errors?.confirmPassword?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Number Input with Typography as a helper text & return value as a number" />
             <RHFNumberInput
               fieldName="age"
@@ -169,7 +169,7 @@ const InputsWithRegisterForm = () => {
               helperText={<Typography color="seagreen">Optional</Typography>}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Tags Input with upto 4 visible tags when not focussed and custom limit text" />
             <RHFTagsInput
               fieldName="tags"
@@ -190,7 +190,7 @@ const InputsWithRegisterForm = () => {
               errorMessage={errors?.tags?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Tags Input with styled chips and all tags visible" />
             <RHFTagsInput
               fieldName="keywords"
@@ -216,7 +216,7 @@ const InputsWithRegisterForm = () => {
               errorMessage={errors?.keywords?.message}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Customized label and allow upload of at max 2 pdf files only" />
             <RHFFileUploader
               fieldName="documents"
@@ -234,7 +234,7 @@ const InputsWithRegisterForm = () => {
               maxFiles={2}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="Upload multiple images showing and show files uploaded" />
             <RHFFileUploader
               fieldName="pictures"
@@ -262,7 +262,7 @@ const InputsWithRegisterForm = () => {
               }}
             />
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <FieldVariantInfo title="FileUploader with custom button" />
             <RHFFileUploader
               fieldName="resume"
@@ -280,10 +280,10 @@ const InputsWithRegisterForm = () => {
               )}
             />
           </Grid>
-          <Grid size={12}>
+          <Grid item xs={12}>
             <SubmitButton />
           </Grid>
-          <Grid size={12}>
+          <Grid item xs={12}>
             <FormState formValues={watch()} errors={errors} />
           </Grid>
         </GridContainer>

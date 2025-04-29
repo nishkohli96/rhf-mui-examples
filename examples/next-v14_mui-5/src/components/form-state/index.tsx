@@ -34,10 +34,10 @@ const FormState = <T extends FieldValues>({
 
   return (
     <Grid container spacing={2}>
-      <Grid size={12}>
+      <Grid item xs={12}>
         <SubHeading title="Form State - Values & Errors" />
       </Grid>
-      <Grid size={{ xs: 12, md: 6 }}>
+      <Grid item xs={12} md={6}>
         <Paper>
           <ReactJson
             src={formValues}
@@ -47,7 +47,7 @@ const FormState = <T extends FieldValues>({
           />
         </Paper>
       </Grid>
-      <Grid size={{ xs: 12, md: 6 }}>
+      <Grid item xs={12} md={6}>
         <Paper>
           <ReactJson
             src={errObj}

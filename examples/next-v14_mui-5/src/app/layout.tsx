@@ -31,12 +31,13 @@ const RootLayout = ({ children }: RootLayoutProps) => {
             <AppBar />
             <Grid container className="content">
               <Grid
-                size={{ md: 3 }}
+                item
+                md={3}
                 sx={{ display: { xs: 'none', md: 'block' } }}
               >
                 <Drawer />
               </Grid>
-              <Grid size={{ xs: 12, md: 9 }}>
+              <Grid item xs={12} md={9}>
                 {children}
               </Grid>
             </Grid>
