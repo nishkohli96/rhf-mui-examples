@@ -2,7 +2,7 @@
 
 import ReactJson from 'react-json-view';
 import { type FieldErrors, type FieldValues } from 'react-hook-form';
-import Grid from '@mui/material/Grid';
+import Grid2 from '@mui/material/Grid2';
 import Paper from '@mui/material/Paper';
 import { SubHeading } from '../page-heading';
 
@@ -33,11 +33,11 @@ const FormState = <T extends FieldValues>({
   });
 
   return (
-    <Grid container spacing={2}>
-      <Grid size={12}>
+    <Grid2 container spacing={2}>
+      <Grid2 size={12}>
         <SubHeading title="Form State - Values & Errors" />
-      </Grid>
-      <Grid size={{ xs: 12, md: 6 }}>
+      </Grid2>
+      <Grid2 size={{ xs: 12, md: 6 }}>
         <Paper>
           <ReactJson
             src={formValues}
@@ -46,8 +46,8 @@ const FormState = <T extends FieldValues>({
             theme="pop"
           />
         </Paper>
-      </Grid>
-      <Grid size={{ xs: 12, md: 6 }}>
+      </Grid2>
+      <Grid2 size={{ xs: 12, md: 6 }}>
         <Paper>
           <ReactJson
             src={errObj}
@@ -56,8 +56,8 @@ const FormState = <T extends FieldValues>({
             theme="pop"
           />
         </Paper>
-      </Grid>
-    </Grid>
+      </Grid2>
+    </Grid2>
   );
 };
 

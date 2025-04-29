@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import Grid from '@mui/material/Grid';
+import Grid2 from '@mui/material/Grid2';
 import { AppBar, Drawer } from '@/components';
 import { AppThemeProvider } from '@/theme';
 import './globals.css';
@@ -29,17 +29,17 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         <AppRouterCacheProvider options={{ key: 'mui' }}>
           <AppThemeProvider>
             <AppBar />
-            <Grid container className="content">
-              <Grid
+            <Grid2 container className="content">
+              <Grid2
                 size={{ md: 3 }}
                 sx={{ display: { xs: 'none', md: 'block' } }}
               >
                 <Drawer />
-              </Grid>
-              <Grid size={{ xs: 12, md: 9 }}>
+              </Grid2>
+              <Grid2 size={{ xs: 12, md: 9 }}>
                 {children}
-              </Grid>
-            </Grid>
+              </Grid2>
+            </Grid2>
             <ToastContainer
               autoClose={3000}
               limit={1}

@@ -2,7 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import { classValidatorResolver } from '@hookform/resolvers/class-validator';
-import Grid from '@mui/material/Grid';
+import Grid2 from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
 import RHFSelect from '@nish1896/rhf-mui-components/mui/select';
 import RHFNativeSelect from '@nish1896/rhf-mui-components/mui/native-select';
@@ -39,7 +39,7 @@ const SelectFormWithClassValidator = () => {
     <FormContainer title="Select Component with Class-Validator">
       <form onSubmit={handleSubmit(onFormSubmit)}>
         <GridContainer>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Single select field with helpertext" />
             <RHFSelect
               fieldName="favouriteColor"
@@ -57,8 +57,8 @@ const SelectFormWithClassValidator = () => {
               }
               required
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Multiple Select with options as an array of objects" />
             <RHFSelect
               fieldName="iplTeams"
@@ -79,8 +79,8 @@ const SelectFormWithClassValidator = () => {
               errorMessage={errors?.iplTeams?.message}
               helperText="Select one or more teams"
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Select with number options" />
             <RHFSelect
               fieldName="randomNum"
@@ -89,8 +89,8 @@ const SelectFormWithClassValidator = () => {
               errorMessage={errors?.randomNum?.message}
               required
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Native select" />
             <RHFNativeSelect
               fieldName="currency"
@@ -102,13 +102,13 @@ const SelectFormWithClassValidator = () => {
               required
               errorMessage={errors?.currency?.message}
             />
-          </Grid>
-          <Grid size={12}>
+          </Grid2>
+          <Grid2 size={12}>
             <SubmitButton />
-          </Grid>
-          <Grid size={12}>
+          </Grid2>
+          <Grid2 size={12}>
             <FormState formValues={watch()} errors={errors} />
-          </Grid>
+          </Grid2>
         </GridContainer>
       </form>
     </FormContainer>

@@ -1,7 +1,7 @@
 'use client';
 
 import { type Path, useForm } from 'react-hook-form';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import useTheme from '@mui/material/styles/useTheme';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { ConfigProvider } from '@nish1896/rhf-mui-components/config';

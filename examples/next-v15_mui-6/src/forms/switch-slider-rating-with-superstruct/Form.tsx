@@ -3,7 +3,7 @@
 import { useForm } from 'react-hook-form';
 import { superstructResolver } from '@hookform/resolvers/superstruct';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
+import Grid2 from '@mui/material/Grid2';
 import { orange } from '@mui/material/colors';
 import RHFRating from '@nish1896/rhf-mui-components/mui/rating';
 import RHFSlider from '@nish1896/rhf-mui-components/mui/slider';
@@ -48,7 +48,7 @@ const SwitchSliderRatingFormWithSuperstruct = () => {
     <FormContainer title="Switch, Slider & Rating with Superstruct validation">
       <form onSubmit={handleSubmit(onFormSubmit)}>
         <GridContainer>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Slider with label, custom range and marks" />
             <RHFSlider
               fieldName="score"
@@ -64,8 +64,8 @@ const SwitchSliderRatingFormWithSuperstruct = () => {
               required
               errorMessage={errors?.score?.message}
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Rating with custom maxValue" />
             <RHFRating
               fieldName="rating"
@@ -77,8 +77,8 @@ const SwitchSliderRatingFormWithSuperstruct = () => {
               required
               helperText="Please select atleast 5"
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Switch with onValueChange and theme override" />
             <ThemeProvider theme={orangeTheme}>
               <RHFSwitch
@@ -86,13 +86,13 @@ const SwitchSliderRatingFormWithSuperstruct = () => {
                 control={control}
               />
             </ThemeProvider>
-          </Grid>
-          <Grid size={12}>
+          </Grid2>
+          <Grid2 size={12}>
             <SubmitButton />
-          </Grid>
-          <Grid size={12}>
+          </Grid2>
+          <Grid2 size={12}>
             <FormState formValues={watch()} errors={errors} />
-          </Grid>
+          </Grid2>
         </GridContainer>
       </form>
     </FormContainer>

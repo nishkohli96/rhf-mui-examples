@@ -2,7 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import RHFCheckbox from '@nish1896/rhf-mui-components/mui/checkbox';
 import RHFCheckboxGroup from '@nish1896/rhf-mui-components/mui/checkbox-group';
 import RHFRadioGroup from '@nish1896/rhf-mui-components/mui/radio-group';

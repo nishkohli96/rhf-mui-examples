@@ -1,6 +1,6 @@
 import { type ReactElement } from 'react';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid2 from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
 
 type FormContainerProps = {
@@ -29,8 +29,8 @@ export const FormContainer = ({ title, children }: FormContainerProps) => {
 
 export const GridContainer = ({ children }: Pick<FormContainerProps, 'children'>) => {
   return (
-    <Grid container spacing={2}>
+    <Grid2 container spacing={2}>
       {children}
-    </Grid>
+    </Grid2>
   );
 };

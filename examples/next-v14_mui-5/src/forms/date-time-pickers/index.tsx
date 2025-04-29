@@ -2,7 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import { type Dayjs } from 'dayjs';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { ConfigProvider } from '@nish1896/rhf-mui-components/config';
 import RHFDatePicker from '@nish1896/rhf-mui-components/mui-pickers/date';

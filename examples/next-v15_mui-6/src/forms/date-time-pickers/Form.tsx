@@ -2,7 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import { type Dayjs } from 'dayjs';
-import Grid from '@mui/material/Grid';
+import Grid2 from '@mui/material/Grid2';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { ConfigProvider } from '@nish1896/rhf-mui-components/config';
 import RHFDatePicker from '@nish1896/rhf-mui-components/mui-pickers/date';
@@ -40,7 +40,7 @@ const DateTimePickersForm = () => {
       <ConfigProvider dateAdapter={AdapterDayjs}>
         <form onSubmit={handleSubmit(onFormSubmit)}>
           <GridContainer>
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid2 size={{ xs: 12, md: 6 }}>
               <FieldVariantInfo title="DatePicker with disabled future" />
               <RHFDatePicker
                 fieldName="dob"
@@ -51,8 +51,8 @@ const DateTimePickersForm = () => {
                 required
                 errorMessage={errors?.dob?.message}
               />
-            </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
+            </Grid2>
+            <Grid2 size={{ xs: 12, md: 6 }}>
               <FieldVariantInfo title="TimePicker with 24-Hour Format" />
               <RHFTimePicker
                 fieldName="time"
@@ -62,8 +62,8 @@ const DateTimePickersForm = () => {
                 required
                 errorMessage={errors?.time?.message}
               />
-            </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
+            </Grid2>
+            <Grid2 size={{ xs: 12, md: 6 }}>
               <RHFDateTimePicker
                 fieldName="dateOfJourney"
                 control={control}
@@ -73,13 +73,13 @@ const DateTimePickersForm = () => {
                 required
                 errorMessage={errors?.dateOfJourney?.message}
               />
-            </Grid>
-            <Grid size={12}>
+            </Grid2>
+            <Grid2 size={12}>
               <SubmitButton />
-            </Grid>
-            <Grid size={12}>
+            </Grid2>
+            <Grid2 size={12}>
               <FormState formValues={watch()} errors={errors} />
-            </Grid>
+            </Grid2>
           </GridContainer>
         </form>
       </ConfigProvider>

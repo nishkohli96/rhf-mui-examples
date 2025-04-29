@@ -3,7 +3,7 @@
 import { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { faker } from '@faker-js/faker';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import RHFCountrySelect, { countryList, type CountryISO } from '@nish1896/rhf-mui-components/mui/country-select';
 import RHFAutocomplete from '@nish1896/rhf-mui-components/mui/autocomplete';

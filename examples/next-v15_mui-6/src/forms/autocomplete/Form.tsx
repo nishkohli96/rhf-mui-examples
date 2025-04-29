@@ -3,7 +3,7 @@
 import { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { faker } from '@faker-js/faker';
-import Grid from '@mui/material/Grid';
+import Grid2 from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
 import RHFCountrySelect, { countryList, type CountryISO } from '@nish1896/rhf-mui-components/mui/country-select';
 import RHFAutocomplete from '@nish1896/rhf-mui-components/mui/autocomplete';
@@ -71,7 +71,7 @@ const AutocompleteForm = () => {
     <FormContainer title="Autocomplete variations with Register Options">
       <form onSubmit={handleSubmit(onFormSubmit)}>
         <GridContainer>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Autocomplete" />
             <RHFAutocomplete
               fieldName="sourceAirport"
@@ -88,8 +88,8 @@ const AutocompleteForm = () => {
               required
               errorMessage={errors?.sourceAirport?.message}
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Autocomplete accepting multiple options and customized chip" />
             <RHFAutocomplete
               fieldName="destinationAirports"
@@ -115,8 +115,8 @@ const AutocompleteForm = () => {
                 }
               }}
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Multi Autocomplete With String Options" />
             <RHFMultiAutocomplete
               fieldName="colors"
@@ -144,8 +144,8 @@ const AutocompleteForm = () => {
               formControlLabelProps={{ sx: { color: 'royalblue' } }}
               errorMessage={errors?.colors?.message}
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Multi Autocomplete With Object Array Options and customized checkbox and formLabel" />
             <RHFMultiAutocomplete
               fieldName="iplTeams"
@@ -182,8 +182,8 @@ const AutocompleteForm = () => {
               required
               errorMessage={errors?.iplTeams?.message}
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="CountrySelect with customized textfield" />
             <RHFCountrySelect
               fieldName="nationality"
@@ -198,8 +198,8 @@ const AutocompleteForm = () => {
               required
               errorMessage={errors?.nationality?.message}
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="CountrySelect - Multiple selection with default values & preferredCountries" />
             <RHFCountrySelect
               fieldName="countriesVisited"
@@ -209,8 +209,8 @@ const AutocompleteForm = () => {
               displayFlagOnSelect
               errorMessage={errors?.countriesVisited?.message}
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="CountrySelect - Multiple Selection with minLength validation, valueKey, filtered Options and ChipProps" />
             <RHFCountrySelect
               fieldName="dreamDestinations"
@@ -251,13 +251,13 @@ const AutocompleteForm = () => {
               required
               errorMessage={errors?.dreamDestinations?.message}
             />
-          </Grid>
-          <Grid size={12}>
+          </Grid2>
+          <Grid2 size={12}>
             <SubmitButton />
-          </Grid>
-          <Grid size={12}>
+          </Grid2>
+          <Grid2 size={12}>
             <FormState formValues={watch()} errors={errors} />
-          </Grid>
+          </Grid2>
         </GridContainer>
       </form>
     </FormContainer>

@@ -2,7 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import Grid from '@mui/material/Grid';
+import Grid2 from '@mui/material/Grid2';
 import RHFCheckbox from '@nish1896/rhf-mui-components/mui/checkbox';
 import RHFCheckboxGroup from '@nish1896/rhf-mui-components/mui/checkbox-group';
 import RHFRadioGroup from '@nish1896/rhf-mui-components/mui/radio-group';
@@ -37,7 +37,7 @@ const CheckboxRadioZodForm = () => {
     <FormContainer title="Checkbox & Radio Group">
       <form onSubmit={handleSubmit(onFormSubmit)}>
         <GridContainer>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Radio Group with onValueChange function" />
             <RHFRadioGroup
               fieldName="gender"
@@ -47,8 +47,8 @@ const CheckboxRadioZodForm = () => {
               required
               errorMessage={errors?.gender?.message}
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="CheckboxGroup with options as an array of objects" />
             <RHFCheckboxGroup
               fieldName="countriesVisited"
@@ -60,8 +60,8 @@ const CheckboxRadioZodForm = () => {
               required
               errorMessage={errors?.countriesVisited?.message}
             />
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <FieldVariantInfo title="Single Checkbox" />
             <RHFCheckbox
               fieldName="agreeTnC"
@@ -69,13 +69,13 @@ const CheckboxRadioZodForm = () => {
               label="Agree to Terms & Conditions"
               errorMessage={errors?.agreeTnC?.message}
             />
-          </Grid>
-          <Grid size={12}>
+          </Grid2>
+          <Grid2 size={12}>
             <SubmitButton />
-          </Grid>
-          <Grid size={12}>
+          </Grid2>
+          <Grid2 size={12}>
             <FormState formValues={watch()} errors={errors} />
-          </Grid>
+          </Grid2>
         </GridContainer>
       </form>
     </FormContainer>
