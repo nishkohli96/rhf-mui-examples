@@ -1,18 +1,16 @@
 {
-  "name": "next-v15-mui-7",
+  "name": "next-v15-mui-6",
   "version": "1.0.0",
   "description": "Next.js v15 template with Material-UI, docker, and Tailwind CSS",
   "author": "Nishant Kohli",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "prod": "pnpm build && pnpm start",
     "lint": "next lint --fix",
-    "lint:check": "next lint",
-    "check-updates": "ncu --format group -u",
-    "install-updates": "pnpm check-updates && pnpm install"
+    "lint:check": "next lint"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-react": "^9.0.0",
