@@ -1,47 +1,57 @@
-import { type ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import { AppBar } from '@/components';
+import { Inter } from 'next/font/google';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
+import Grid from '@mui/material/Grid';
+import { ToastContainer } from 'react-toastify';
 import { AppThemeProvider } from '@/theme';
+import { AppBar, Drawer, Footer } from '@/components';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
+type RootLayoutProps = {
+  children: React.ReactNode;
+};
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+const inter = Inter({ subsets: ['latin'] });
+const defaultTitle = 'RHF-Mui Components';
 
-const defaultTitle = 'NextJs App';
 export const metadata: Metadata = {
   title: {
     template: `%s | ${defaultTitle}`,
-    default: defaultTitle,
+    default: defaultTitle
   },
-  description: 'NextJS Template App'
+  description: 'Examples for RHF-Mui Components'
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: ReactNode;
-}>) {
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <AppRouterCacheProvider>
+      <body className={inter.className}>
+        <AppRouterCacheProvider options={{ key: 'mui' }}>
           <AppThemeProvider>
             <AppBar />
-            {children}
+            <Grid container className="content">
+              <Grid
+                size={{ md: 3 }}
+                sx={{ display: { xs: 'none', md: 'block' } }}
+              >
+                <Drawer />
+              </Grid>
+              <Grid size={{ xs: 12, md: 9 }}>
+                {children}
+              </Grid>
+            </Grid>
+            <Footer />
+            <ToastContainer
+              autoClose={3000}
+              limit={1}
+              closeButton
+              style={{ fontSize: '1rem' }}
+            />
           </AppThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
