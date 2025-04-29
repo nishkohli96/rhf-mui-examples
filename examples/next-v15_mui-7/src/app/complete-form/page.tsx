@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ContentContainer, PageHeading, SubHeading } from '@/components';
-// import CompleteForm from '@/forms/complete-form';
+import CompleteForm from '@/forms/complete-form';
 
 const title = 'Complete Form with Register Options';
 const description = 'A complete form showcasing all components from this package with appropriate validations.';
@@ -15,7 +15,7 @@ const CompleteFormPage = () => {
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
-      {/* <CompleteForm /> */}
+      <CompleteForm />
     </ContentContainer>
   );
 };

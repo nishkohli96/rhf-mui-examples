@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ContentContainer, PageHeading, SubHeading } from '@/components';
-// import MiscellaneousComponentsForm from '@/forms/miscellaneous-components';
+import MiscellaneousComponentsForm from '@/forms/miscellaneous-components';
 
 const title = 'Miscellaneous Components';
 const description = 'Form demonstrating usage of external components like ColorPicker & RichTextEditor with react-hook-form.';
@@ -15,7 +15,7 @@ const MiscellaneousComponentsFormPage = () => {
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
-      {/* <MiscellaneousComponentsForm /> */}
+      <MiscellaneousComponentsForm />
     </ContentContainer>
   );
 };

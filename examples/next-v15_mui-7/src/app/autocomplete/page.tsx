@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ContentContainer, PageHeading, SubHeading } from '@/components';
-// import AutocompleteForm from '@/forms/autocomplete';
+import AutocompleteForm from '@/forms/autocomplete';
 
 const title = 'Autocomplete';
 const description = 'Showcase of Autocomplete components - RHFAutocomplete, RHFMultiAutocomplete and RHFCountrySelect designed for selecting single or multiple values in form.';
@@ -15,7 +15,7 @@ const MultiSelectDropdownFormPage = () => {
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
-      {/* <AutocompleteForm /> */}
+      <AutocompleteForm />
     </ContentContainer>
   );
 };

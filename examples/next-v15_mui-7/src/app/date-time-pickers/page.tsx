@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ContentContainer, PageHeading, SubHeading } from '@/components';
-// import DateTimePickersForm from '@/forms/date-time-pickers';
+import DateTimePickersForm from '@/forms/date-time-pickers';
 
 const title = 'Date & Time Pickers';
 const description = 'A form using RHFDatePicker, RHFTimePicker & RHFDateTimePicker components.';
@@ -15,7 +15,7 @@ const DateTimePickerFormPage = () => {
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
-      {/* <DateTimePickersForm /> */}
+      <DateTimePickersForm />
     </ContentContainer>
   );
 };

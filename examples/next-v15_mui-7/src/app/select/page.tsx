@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ContentContainer, PageHeading, SubHeading } from '@/components';
-// import SelectFormWithClassValidator from '@/forms/select-with-class-validator';
+import SelectFormWithClassValidator from '@/forms/select-with-class-validator';
 
 const title = 'Select with Class-Validator';
 const description = 'Form utilizing RHFSelect and RHFNativeSelect with validation managed using class-validator.';
@@ -15,7 +15,7 @@ const SelectWithClassValidatorPage = () => {
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
-      {/* <SelectFormWithClassValidator /> */}
+      <SelectFormWithClassValidator />
     </ContentContainer>
   );
 };
