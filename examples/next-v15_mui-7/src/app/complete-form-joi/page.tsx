@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { ContentContainer, PageHeading, LinksList, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks, CodeSandboxLinks, ValidationLibLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 // import CompleteFormWithJoi from '@/forms/complete-form-with-joi';
 
 const title = 'Complete Form with Joi';
@@ -12,18 +11,11 @@ export const metadata: Metadata = {
 };
 
 const CompleteFormWithJoiPage = () => {
-  const links = Object.keys(DocsLinks).map(k => DocsLinks[k]);
-  const codeLinks = [
-    SourceCodeLinks.completeFormJoi,
-    CodeSandboxLinks.completeForm
-  ];
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       {/* <CompleteFormWithJoi /> */}
-      <LinksList links={[...links, ValidationLibLinks.joi]} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { ContentContainer, PageHeading, LinksList, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks, CodeSandboxLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 // import CompleteForm from '@/forms/complete-form';
 
 const title = 'Complete Form with Register Options';
@@ -12,18 +11,11 @@ export const metadata: Metadata = {
 };
 
 const CompleteFormPage = () => {
-  const links = Object.keys(DocsLinks).map(k => DocsLinks[k]);
-  const codeLinks = [
-    SourceCodeLinks.completeForm,
-    CodeSandboxLinks.completeForm
-  ];
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       {/* <CompleteForm /> */}
-      <LinksList links={links} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };

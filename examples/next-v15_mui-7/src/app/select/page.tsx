@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { ContentContainer, LinksList, PageHeading, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks, CodeSandboxLinks, ValidationLibLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 // import SelectFormWithClassValidator from '@/forms/select-with-class-validator';
 
 const title = 'Select with Class-Validator';
@@ -12,23 +11,11 @@ export const metadata: Metadata = {
 };
 
 const SelectWithClassValidatorPage = () => {
-  const links = [
-    DocsLinks.rhfSelect,
-    DocsLinks.rhfNativeSelect,
-    ValidationLibLinks.classValidator
-  ];
-  const codeLinks = [
-    SourceCodeLinks.select,
-    CodeSandboxLinks.select
-  ];
-
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       {/* <SelectFormWithClassValidator /> */}
-      <LinksList links={links} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };

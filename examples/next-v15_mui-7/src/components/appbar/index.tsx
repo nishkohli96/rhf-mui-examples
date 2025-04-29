@@ -1,31 +1,49 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import Box from '@mui/material/Box';
+import Image from 'next/image';
 import MuiAppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { ThemeChangeButton } from '@/components';
+import DrawerMenu from './DrawerMenu';
+import {
+  DocsButton,
+  GithubButton,
+  ThemeChangeButton
+} from '../buttons';
 
-export default function AppBar() {
+const AppBar = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <MuiAppBar position="static">
         <Toolbar>
-          <Link href="/" style={{ marginRight: '10px' }}>
-            <Image src="/favicon.ico" alt="Logo" width={40} height={40} />
+          <DrawerMenu />
+          <Link href="/">
+            <Image
+              src="/favicon.ico"
+              alt="Logo"
+              width={50}
+              height={50}
+              style={{
+                borderRadius: '50%',
+                objectFit: 'cover'
+              }}
+            />
           </Link>
-          <Box sx={{ flexGrow: 1 }}>
-            <Link href="/" passHref>
-              <Typography variant="h6" component="div">
-                Next.js App
-              </Typography>
-            </Link>
+          <Box
+            sx={{
+              flexGrow: 1,
+              textAlign: 'center'
+            }}
+          >
+            <Typography variant="h6">RHF-Mui Components</Typography>
           </Box>
-          <Typography variant="h6" component="div">
-            <ThemeChangeButton />
-          </Typography>
+          <DocsButton />
+          <GithubButton />
+          <ThemeChangeButton />
         </Toolbar>
       </MuiAppBar>
     </Box>
   );
-}
+};
+
+export default AppBar;

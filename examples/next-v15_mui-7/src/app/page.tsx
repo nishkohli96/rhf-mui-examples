@@ -1,13 +1,26 @@
+import { Fragment } from 'react';
 import type { Metadata } from 'next';
 import Link from '@mui/material/Link';
+import Alert from '@mui/material/Alert';
 import Typography from '@mui/material/Typography';
-import { ENV_VARS } from '@/constants';
 import { ContentContainer, PageHeading } from '@/components';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import { getPkgVersion } from '@/utils';
 
 export const metadata: Metadata = {
   title: 'Introduction',
-  description: 'Overview of the Examples Website for RHF-MUI Components'
+  description: 'Overview of the Examples Website for RHF-MUI Components',
 };
+
+const dependencies = [
+  '@mui/material',
+  '@mui/icons-material',
+  '@mui/material-nextjs',
+  '@mui/x-date-pickers',
+  'next',
+];
 
 const HomePage = () => {
   return (
@@ -20,7 +33,7 @@ const HomePage = () => {
         </Typography>
 
         <Typography variant="body1" sx={{ mt: '20px' }}>
-          This website demonstrates examples from the
+          Next.js app to demonstrate examples from the
           <Link
             href="https://www.npmjs.com/package/@nish1896/rhf-mui-components"
             target="_blank"
@@ -33,17 +46,39 @@ const HomePage = () => {
           through the attached
           {' '}
           <b>formState component</b>
-          . Each page also
-          provides links to the relevant documentation and the source code for
-          the components used.
+          .
         </Typography>
-        <Typography variant="body1" sx={{ mt: '20px' }}>
-          To view the documentation of this package, please visit
-          {' '}
-          <Link href={ENV_VARS.DOCS_URL} target="_blank">
-            {` ${ENV_VARS.DOCS_URL}.`}
-          </Link>
-        </Typography>
+        <Alert severity="info" sx={{ mt: 2 }}>
+          <Typography variant="body1" fontWeight="bold" gutterBottom>
+            Versions
+          </Typography>
+          <List dense disablePadding>
+            {dependencies.map(pkg => (
+              <ListItem key={pkg} disableGutters>
+                <ListItemText
+                  primary={
+                    <Fragment>
+                      <Typography
+                        component="span"
+                        fontWeight="medium"
+                        color="text.primary"
+                      >
+                        {`${pkg}:`}
+                      </Typography>
+                      <Typography
+                        component="span"
+                        color="secondary"
+                        sx={{ ml: 0.5 }}
+                      >
+                        {getPkgVersion(pkg)}
+                      </Typography>
+                    </Fragment>
+                  }
+                />
+              </ListItem>
+            ))}
+          </List>
+        </Alert>
       </ContentContainer>
     </main>
   );

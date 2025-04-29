@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { ContentContainer, LinksList, PageHeading, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks, CodeSandboxLinks, ValidationLibLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 // import CheckboxRadioZodForm from '@/forms/checkbox-and-radiogroup-with-zod';
 
 const title = 'CheckboxGroup & RadioGroup with Zod Validation';
@@ -12,24 +11,11 @@ export const metadata: Metadata = {
 };
 
 const CheckboxRadioZodFormPage = () => {
-  const links = [
-    DocsLinks.rhfCheckbox,
-    DocsLinks.rhfCheckboxGroup,
-    DocsLinks.rhfRadioGroup,
-    ValidationLibLinks.zod
-  ];
-  const codeLinks = [
-    SourceCodeLinks.checkboxRadio,
-    CodeSandboxLinks.checkboxRadio
-  ];
-
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       {/* <CheckboxRadioZodForm /> */}
-      <LinksList links={links} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { ContentContainer, LinksList, PageHeading, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks, CodeSandboxLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 // import DateTimePickersForm from '@/forms/date-time-pickers';
 
 const title = 'Date & Time Pickers';
@@ -12,23 +11,11 @@ export const metadata: Metadata = {
 };
 
 const DateTimePickerFormPage = () => {
-  const links = [
-    DocsLinks.rhfDatePicker,
-    DocsLinks.rhfTimePicker,
-    DocsLinks.rhfDateTimePicker
-  ];
-  const codeLinks = [
-    SourceCodeLinks.dateTimePickers,
-    CodeSandboxLinks.dateTimePickers
-  ];
-
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       {/* <DateTimePickersForm /> */}
-      <LinksList links={links} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };

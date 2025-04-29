@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { AppThemeProvider } from '@/theme';
-import { AppBar, Footer } from '@/components';
+import { AppBar } from '@/components';
 import './globals.css';
 import Grid from '@mui/material/Grid';
 import DrawerContent from '@/components/drawer';
@@ -40,7 +40,6 @@ const RootLayout = ({ children }: RootLayoutProps) => {
                 {children}
               </Grid>
             </Grid>
-            <Footer />
           </AppThemeProvider>
         </AppRouterCacheProvider>
       </body>

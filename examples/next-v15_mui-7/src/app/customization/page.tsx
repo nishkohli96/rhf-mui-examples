@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { ContentContainer, LinksList, PageHeading, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks, CodeSandboxLinks, ValidationLibLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 // import StyledReusableComponentForm from '@/forms/styled-form-with-reusable-component';
 
 const title = 'Styled form with a reusable component';
@@ -13,23 +12,11 @@ export const metadata: Metadata = {
 };
 
 const CustomizationPage = () => {
-  const links = [
-    DocsLinks.rhfTextField,
-    DocsLinks.rhfDatePicker,
-    ValidationLibLinks.luxon
-  ];
-  const codeLinks = [
-    SourceCodeLinks.customization,
-    SourceCodeLinks.styledTextField,
-    CodeSandboxLinks.customization
-  ];
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description} />
       {/* <StyledReusableComponentForm /> */}
-      <LinksList links={links} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { ContentContainer, LinksList, PageHeading, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks, CodeSandboxLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 // import MiscellaneousComponentsForm from '@/forms/miscellaneous-components';
 
 const title = 'Miscellaneous Components';
@@ -12,23 +11,11 @@ export const metadata: Metadata = {
 };
 
 const MiscellaneousComponentsFormPage = () => {
-  const links = [
-    DocsLinks.rhfColorPicker,
-    DocsLinks.rhfRichTextEditor,
-    DocsLinks.rhfPhoneInput
-  ];
-  const codeLinks = [
-    SourceCodeLinks.miscellaneous,
-    CodeSandboxLinks.miscellaneous
-  ];
-
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       {/* <MiscellaneousComponentsForm /> */}
-      <LinksList links={links} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };

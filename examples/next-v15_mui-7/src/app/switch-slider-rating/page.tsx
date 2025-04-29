@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { ContentContainer, LinksList, PageHeading, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks, CodeSandboxLinks, ValidationLibLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 // import SwitchSliderRatingFormWithSuperstruct from '@/forms/switch-slider-rating-with-superstruct';
 
 const title = 'Switch, Slider & Rating with Superstruct validation';
@@ -12,23 +11,11 @@ export const metadata: Metadata = {
 };
 
 const SwitchSliderRatingFormPage = () => {
-  const links = [
-    DocsLinks.rhfSwitch,
-    DocsLinks.rhfSlider,
-    DocsLinks.rhfRating,
-    ValidationLibLinks.superstruct
-  ];
-  const codeLinks = [
-    SourceCodeLinks.switchSliderRating,
-    CodeSandboxLinks.switchSliderRating
-  ];
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       {/* <SwitchSliderRatingFormWithSuperstruct /> */}
-      <LinksList links={links} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };

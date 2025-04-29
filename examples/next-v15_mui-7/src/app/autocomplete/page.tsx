@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { ContentContainer, PageHeading, LinksList, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 // import AutocompleteForm from '@/forms/autocomplete';
 
 const title = 'Autocomplete';
@@ -12,22 +11,11 @@ export const metadata: Metadata = {
 };
 
 const MultiSelectDropdownFormPage = () => {
-  const codeLinks = [
-    SourceCodeLinks.countrySelect,
-  ];
-  const docsLinks = [
-    DocsLinks.rhfAutocomplete,
-    DocsLinks.rhfMultiAutocomplete,
-    DocsLinks.rhfCountrySelect
-  ];
-
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       {/* <AutocompleteForm /> */}
-      <LinksList links={docsLinks} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };

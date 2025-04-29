@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { ContentContainer, LinksList, PageHeading, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks, CodeSandboxLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 // import InputsWithRegisterForm from '@/forms/inputs-with-register-options';
 
 const title = 'Inputs';
@@ -12,25 +11,11 @@ export const metadata: Metadata = {
 };
 
 const TextFieldPage = () => {
-  const links = [
-    DocsLinks.rhfTextField,
-    DocsLinks.rhfNumberInput,
-    DocsLinks.rhfPasswordInput,
-    DocsLinks.rhfTagsInput,
-    DocsLinks.rhfFileUploader
-  ];
-  const codeLinks = [
-    SourceCodeLinks.inputs,
-    CodeSandboxLinks.inputs
-  ];
-
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       {/* <InputsWithRegisterForm /> */}
-      <LinksList links={links} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };
