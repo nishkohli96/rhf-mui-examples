@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     template: `%s | ${defaultTitle}`,
     default: defaultTitle
   },
-  description: 'Examples for RHF-Mui Components'
 };
 
 const RootLayout = ({ children }: RootLayoutProps) => {

@@ -10,7 +10,6 @@ import { getPkgVersion } from '@/utils';
 
 export const metadata: Metadata = {
   title: 'Introduction',
-  description: 'Overview of the Examples Website for RHF-MUI Components',
 };
 
 const dependencies = [
