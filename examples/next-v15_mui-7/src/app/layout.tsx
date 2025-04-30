@@ -38,6 +38,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
                 <Drawer />
               </Grid>
               <Grid size={{ xs: 12, md: 9 }}>
+                {/* @ts-ignore */}
                 {children}
               </Grid>
             </Grid>

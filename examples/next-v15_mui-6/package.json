@@ -1,7 +1,7 @@
 {
   "name": "next-v15-mui-6",
   "version": "1.0.0",
-  "description": "Next.js v15 template with Material-UI, docker, and Tailwind CSS",
+  "description": "Next.js v15 app with MUI v6, Mui Pickers v7 to test @nish1896/rhf-mui-components",
   "author": "Nishant Kohli",
   "private": true,
   "scripts": {

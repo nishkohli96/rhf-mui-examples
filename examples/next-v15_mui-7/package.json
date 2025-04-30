@@ -1,8 +1,7 @@
 {
   "name": "next-v15-mui-7",
   "version": "1.0.0",
-  "description": "Next.js v15 template with Material-UI, docker, and Tailwind CSS",
-  "author": "Nishant Kohli",
+  "description": "Next.js v15 app with MUI v7, Mui Pickers v8 to test @nish1896/rhf-mui-components",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
@@ -52,7 +51,7 @@
     "@tailwindcss/postcss": "^4.1.4",
     "@types/node": "^22.15.3",
     "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
+    "@types/react-dom": "^19.0.4",
     "eslint": "^9.25.1",
     "eslint-config-next": "15.3.1",
     "husky": "^9.1.7",
