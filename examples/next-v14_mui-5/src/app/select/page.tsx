@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
-import { ContentContainer, LinksList, PageHeading, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks, CodeSandboxLinks, ValidationLibLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 
 const ClientForm = dynamic(() => import('@/forms/select-with-class-validator'), { ssr: false });
 
@@ -14,23 +13,11 @@ export const metadata: Metadata = {
 };
 
 const SelectWithClassValidatorPage = () => {
-  const links = [
-    DocsLinks.rhfSelect,
-    DocsLinks.rhfNativeSelect,
-    ValidationLibLinks.classValidator
-  ];
-  const codeLinks = [
-    SourceCodeLinks.select,
-    CodeSandboxLinks.select
-  ];
-
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       <ClientForm />
-      <LinksList links={links} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };

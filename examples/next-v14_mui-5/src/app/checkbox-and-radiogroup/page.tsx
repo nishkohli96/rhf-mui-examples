@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
-import { ContentContainer, LinksList, PageHeading, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks, CodeSandboxLinks, ValidationLibLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 
 const ClientForm = dynamic(() => import('@/forms/checkbox-and-radiogroup-with-zod'), { ssr: false });
 
@@ -14,24 +13,11 @@ export const metadata: Metadata = {
 };
 
 const CheckboxRadioZodFormPage = () => {
-  const links = [
-    DocsLinks.rhfCheckbox,
-    DocsLinks.rhfCheckboxGroup,
-    DocsLinks.rhfRadioGroup,
-    ValidationLibLinks.zod
-  ];
-  const codeLinks = [
-    SourceCodeLinks.checkboxRadio,
-    CodeSandboxLinks.checkboxRadio
-  ];
-
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       <ClientForm />
-      <LinksList links={links} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };

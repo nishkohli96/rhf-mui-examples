@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
-import { ContentContainer, PageHeading, LinksList, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks, CodeSandboxLinks, ValidationLibLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 
 const ClientForm = dynamic(() => import('@/forms/complete-form-with-joi'), { ssr: false });
 
@@ -14,18 +13,11 @@ export const metadata: Metadata = {
 };
 
 const CompleteFormWithJoiPage = () => {
-  const links = Object.keys(DocsLinks).map(k => DocsLinks[k]);
-  const codeLinks = [
-    SourceCodeLinks.completeFormJoi,
-    CodeSandboxLinks.completeForm
-  ];
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       <ClientForm />
-      <LinksList links={[...links, ValidationLibLinks.joi]} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };

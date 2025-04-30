@@ -4,7 +4,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import Grid from '@mui/material/Grid';
 import { ToastContainer } from 'react-toastify';
 import { AppThemeProvider } from '@/theme';
-import { AppBar, Drawer, Footer } from '@/components';
+import { AppBar, Drawer } from '@/components';
 import './globals.css';
 
 type RootLayoutProps = {
@@ -41,7 +41,6 @@ const RootLayout = ({ children }: RootLayoutProps) => {
                 {children}
               </Grid>
             </Grid>
-            <Footer />
             <ToastContainer
               autoClose={3000}
               limit={1}

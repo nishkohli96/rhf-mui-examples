@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
-import { ContentContainer, PageHeading, LinksList, SubHeading } from '@/components';
-import { DocsLinks, SourceCodeLinks } from '@/constants';
+import { ContentContainer, PageHeading, SubHeading } from '@/components';
 
 const ClientForm = dynamic(() => import('@/forms/autocomplete'), { ssr: false });
 
@@ -14,22 +13,11 @@ export const metadata: Metadata = {
 };
 
 const MultiSelectDropdownFormPage = () => {
-  const codeLinks = [
-    SourceCodeLinks.countrySelect,
-  ];
-  const docsLinks = [
-    DocsLinks.rhfAutocomplete,
-    DocsLinks.rhfMultiAutocomplete,
-    DocsLinks.rhfCountrySelect
-  ];
-
   return (
     <ContentContainer>
       <PageHeading title={title} />
       <SubHeading title={description}/>
       <ClientForm />
-      <LinksList links={docsLinks} />
-      <LinksList links={codeLinks} areCodeLinks />
     </ContentContainer>
   );
 };
