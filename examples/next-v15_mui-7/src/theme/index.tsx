@@ -51,13 +51,22 @@ export const AppThemeProvider = ({ children }: LayoutProps ) => {
   );
 
   return (
-    <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
+    // <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
+    //   <>
+    //   <ThemeProvider theme={theme}>
+    //     <Fragment>
+    //       <CssBaseline />
+    //       {children}
+    //     </Fragment>
+    //   </ThemeProvider>
+    //   </>
+    // </ThemeContext.Provider>
+    <ThemeContext.Provider value={{ currentTheme, toggleTheme }} children={
       <ThemeProvider theme={theme}>
-        <Fragment>
-          <CssBaseline />
-          {children}
-        </Fragment>
+        <CssBaseline />
+        {children}
       </ThemeProvider>
-    </ThemeContext.Provider>
+    } />
+    
   );
 };

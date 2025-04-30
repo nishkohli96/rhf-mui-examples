@@ -1,4 +1,4 @@
-import { type ReactElement } from 'react';
+import type { ReactElement, ReactNode } from 'react';
 import Box from '@mui/material/Box';
 import Grid2 from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
@@ -6,6 +6,10 @@ import Typography from '@mui/material/Typography';
 type FormContainerProps = {
   title: string;
   children: ReactElement | ReactElement[];
+};
+
+type GridContainerProps = {
+  children: ReactNode;
 };
 
 export const ContentContainer = ({ children }: Pick<FormContainerProps, 'children'>) => {
@@ -27,7 +31,7 @@ export const FormContainer = ({ title, children }: FormContainerProps) => {
   );
 };
 
-export const GridContainer = ({ children }: Pick<FormContainerProps, 'children'>) => {
+export const GridContainer = ({ children }: GridContainerProps) => {
   return (
     <Grid2 container spacing={2}>
       {children}

@@ -1,4 +1,4 @@
-import { Fragment, type ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { type FieldValues } from 'react-hook-form';
 import Typography from '@mui/material/Typography';
 import RHFTextField, { type RHFTextFieldProps } from '@nish1896/rhf-mui-components/mui/textfield';
@@ -15,14 +15,14 @@ type StyledErrorMsgProps = {
 
 const StyledErrorMsg = ({ errorMessage }: StyledErrorMsgProps) => {
   return (
-    <Fragment>
+    <>
       {Boolean(errorMessage) && (
         <Typography variant="body2">
           <PriorityHighIcon color="error" />
           {errorMessage}
         </Typography>
       )}
-    </Fragment>
+    </>
   );
 };
 

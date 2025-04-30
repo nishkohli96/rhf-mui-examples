@@ -8,6 +8,10 @@ type FormContainerProps = {
   children: ReactElement | ReactElement[];
 };
 
+type GridContainerProps = {
+  children: React.ReactNode;
+};
+
 export const ContentContainer = ({ children }: Pick<FormContainerProps, 'children'>) => {
   return (
     <Box sx={{ padding: { xs: '30px 25px', md: '50px 20px' } }}>
@@ -27,7 +31,7 @@ export const FormContainer = ({ title, children }: FormContainerProps) => {
   );
 };
 
-export const GridContainer = ({ children }: Pick<FormContainerProps, 'children'>) => {
+export const GridContainer = ({ children }: GridContainerProps) => {
   return (
     <Grid container spacing={2}>
       {children}

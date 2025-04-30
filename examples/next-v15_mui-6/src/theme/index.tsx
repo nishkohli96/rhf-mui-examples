@@ -26,7 +26,7 @@ const ThemeContext = createContext<ThemeContextProps>({
 
 export const useThemeContext = () => useContext(ThemeContext);
 
-export const AppThemeProvider = ({ children }: LayoutProps ) => {
+export const AppThemeProvider = ({ children }: LayoutProps) => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const [currentTheme, setCurrentTheme] = useState<PaletteMode>('dark');
 
