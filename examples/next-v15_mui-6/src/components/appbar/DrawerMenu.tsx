@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
@@ -23,22 +23,26 @@ const DrawerMenu = () => {
    * Add icons for github repo and docs link
    */
   return (
-    <Fragment>
+    <>
       {isPhone && (
-        <Fragment>
+        <>
           <IconButton aria-label="Menu" onClick={toggleDrawer(true)}>
             <MenuIcon />
           </IconButton>
           <Drawer
             open={drawerOpen}
             onClose={toggleDrawer(false)}
-            PaperProps={{ sx: { width: '70vw' } }}
+            slotProps={{
+              paper: { 
+                sx: { width: '70vw' }
+              }
+            }}
           >
             <DrawerContentClient />
           </Drawer>
-        </Fragment>
+        </>
       )}
-    </Fragment>
+    </>
   );
 };
 

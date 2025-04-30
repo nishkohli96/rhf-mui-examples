@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import type { Metadata } from 'next';
 import Link from '@mui/material/Link';
 import Alert from '@mui/material/Alert';
@@ -57,7 +56,7 @@ const HomePage = () => {
               <ListItem key={pkg} disableGutters>
                 <ListItemText
                   primary={
-                    <Fragment>
+                    <>
                       <Typography
                         component="span"
                         fontWeight="medium"
@@ -72,7 +71,7 @@ const HomePage = () => {
                       >
                         {getPkgVersion(pkg)}
                       </Typography>
-                    </Fragment>
+                    </>
                   }
                 />
               </ListItem>
