@@ -57,7 +57,7 @@ export const AppThemeProvider = ({ children }: LayoutProps ) => {
         <CssBaseline />
         {children}
       </ThemeProvider>
-    } />
-    
+    }
+    />
   );
 };

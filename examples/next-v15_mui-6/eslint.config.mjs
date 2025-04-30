@@ -18,7 +18,9 @@ const eslintConfig = [
   ...nextTsConfig,
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
-    rules: {}
+    rules: {
+      '@next/next/no-duplicate-head': 'off',
+    }
   }
 ];
 

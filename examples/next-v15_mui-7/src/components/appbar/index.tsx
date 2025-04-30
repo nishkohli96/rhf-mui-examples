@@ -4,7 +4,7 @@ import MuiAppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import AppIcon  from '@/app/icon.ico';
+import AppIcon from '@/app/icon.ico';
 import DrawerMenu from './DrawerMenu';
 import {
   DocsButton,

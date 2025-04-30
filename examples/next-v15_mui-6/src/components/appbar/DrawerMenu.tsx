@@ -33,7 +33,7 @@ const DrawerMenu = () => {
             open={drawerOpen}
             onClose={toggleDrawer(false)}
             slotProps={{
-              paper: { 
+              paper: {
                 sx: { width: '70vw' }
               }
             }}
