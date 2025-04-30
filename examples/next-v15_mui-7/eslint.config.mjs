@@ -20,6 +20,7 @@ const eslintConfig = [
   {
     rules: {
       '@next/next/no-duplicate-head': 'off',
+      '@typescript-eslint/ban-ts-comment': 'off',
     }
   }
 ];

@@ -1,14 +1,17 @@
 'use client';
 
 import {
-  Fragment,
   createContext,
   useContext,
   useEffect,
   useMemo,
   useState,
 } from 'react';
-import { ThemeProvider, createTheme, type PaletteMode } from '@mui/material/styles';
+import {
+  ThemeProvider,
+  createTheme,
+  type PaletteMode,
+} from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CssBaseline from '@mui/material/CssBaseline';
 import { type LayoutProps } from '@/types';
@@ -26,7 +29,7 @@ const ThemeContext = createContext<ThemeContextProps>({
 
 export const useThemeContext = () => useContext(ThemeContext);
 
-export const AppThemeProvider = ({ children }: LayoutProps ) => {
+export const AppThemeProvider = ({ children }: LayoutProps) => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const [currentTheme, setCurrentTheme] = useState<PaletteMode>('dark');
 
@@ -52,12 +55,11 @@ export const AppThemeProvider = ({ children }: LayoutProps ) => {
 
   return (
     // @ts-ignore
-    <ThemeContext.Provider value={{ currentTheme, toggleTheme }} children={
+    <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {children}
       </ThemeProvider>
-    }
-    />
+    </ThemeContext.Provider>
   );
 };

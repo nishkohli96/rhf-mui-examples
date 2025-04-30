@@ -1,3 +1,4 @@
+import { type ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
@@ -8,7 +9,7 @@ import { AppThemeProvider } from '@/theme';
 import './globals.css';
 
 type RootLayoutProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const inter = Inter({ subsets: ['latin'] });
