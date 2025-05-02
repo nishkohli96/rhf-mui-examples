@@ -1,0 +1,40 @@
+import type { ReactElement, ReactNode } from 'react';
+import Box from '@mui/material/Box';
+import Grid2 from '@mui/material/Grid2';
+import Typography from '@mui/material/Typography';
+
+type FormContainerProps = {
+  title: string;
+  children: ReactElement | ReactElement[];
+};
+
+type GridContainerProps = {
+  children: ReactNode;
+};
+
+export const ContentContainer = ({ children }: Pick<FormContainerProps, 'children'>) => {
+  return (
+    <Box sx={{ padding: { xs: '30px 25px', md: '50px 20px' } }}>
+      {children}
+    </Box>
+  );
+};
+
+export const FormContainer = ({ title, children }: FormContainerProps) => {
+  return (
+    <Box sx={{ padding: '10px', border: '1px solid gray' }}>
+      <Typography variant="h6" sx={{ mb: '20px' }}>
+        {title}
+      </Typography>
+      {children}
+    </Box>
+  );
+};
+
+export const GridContainer = ({ children }: GridContainerProps) => {
+  return (
+    <Grid2 container spacing={2}>
+      {children}
+    </Grid2>
+  );
+};

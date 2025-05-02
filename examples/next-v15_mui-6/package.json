@@ -1,0 +1,80 @@
+{
+  "name": "next-v15-mui-6",
+  "version": "1.0.0",
+  "description": "Next.js v15 app with MUI v6, Mui Pickers v7 to test @nish1896/rhf-mui-components",
+  "author": "Nishant Kohli",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "prod": "pnpm build && pnpm start",
+    "lint": "next lint --fix",
+    "lint:check": "next lint"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-react": "^9.0.0",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@faker-js/faker": "^9.2.0",
+    "@hookform/resolvers": "^3.9.0",
+    "@mui/icons-material": "^6.4.11",
+    "@mui/material": "^6.4.11",
+    "@mui/material-nextjs": "^6.4.3",
+    "@mui/x-date-pickers": "^7.29.1",
+    "@nish1896/rhf-mui-components": "latest",
+    "ckeditor5": "^43.0.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "date-fns": "^3.6.0",
+    "dayjs": "^1.11.11",
+    "joi": "^17.13.1",
+    "luxon": "^3.4.4",
+    "moment": "^2.30.1",
+    "next": "15.3.1",
+    "react": "^18.3.1",
+    "react-color-palette": "7.3.0",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.0",
+    "react-international-phone": "^4.3.0",
+    "react-json-view": "^1.21.3",
+    "react-toastify": "^11.0.5",
+    "superstruct": "^2.0.2",
+    "yup": "^1.4.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@nish1896/eslint-flat-config": "^2.0.4",
+    "@tailwindcss/postcss": "^4.1.4",
+    "@types/node": "^22.14.1",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^9.25.0",
+    "eslint-config-next": "15.3.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3"
+  },
+  "lint-staged": {
+    "*.{json,html,css,sass,scss}": [
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "packageManager": "pnpm@10.8.1",
+  "keywords": [
+    "nextjs",
+    "template",
+    "material-ui",
+    "tailwindcss",
+    "docker"
+  ],
+  "license": "MIT"
+}
