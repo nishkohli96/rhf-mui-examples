@@ -23,7 +23,6 @@
     "@mui/material": "^6.4.11",
     "@mui/material-nextjs": "^6.4.3",
     "@mui/x-date-pickers": "^7.29.1",
-    "@nish1896/rhf-mui-components": "latest",
     "ckeditor5": "^43.0.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
@@ -68,7 +67,6 @@
       "eslint --fix"
     ]
   },
-  "packageManager": "pnpm@10.8.1",
   "keywords": [
     "nextjs",
     "template",
